@@ -1,38 +1,106 @@
-.App {
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007bff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input styling */
+input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.add-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button.edit-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button.toggle-button {
+  background-color: #6c757d;
+  color: #fff;
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.todo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item span {
+  flex: 1;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.todo-item input[type="text"] {
+  flex: 1;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.todo-item button {
+  margin-left: 0.5rem;
 }
